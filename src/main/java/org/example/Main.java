@@ -7,11 +7,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] tamanhos = {100000}; // tamanhos de teste
+        int[] tamanhos = {200}; // tamanhos de teste
 
 
         for (int n : tamanhos) {
-            int[] dados = GerarArrayAleatorio.gerarArrayAleatorio(n, 1000000);
+            int[] dados = GerarArrayAleatorio.gerarArrayAleatorio(n, 200);
             BubbleSort.sort(dados);
         }
 }}

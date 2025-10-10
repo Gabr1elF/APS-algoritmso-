@@ -18,6 +18,7 @@ public class QuickSort {
         return array;
     }
 
+
     public static void main(String[] args) {
         int[] tamanhos = {10, 2, 3, 4, 80};
         for(int n : tamanhos){

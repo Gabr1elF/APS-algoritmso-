@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    //Esse é algoritmo mais lento, pois ele vê elemente a elemente, um por um, e vai passando
+    //Esse é algoritmo mais lento, pois ele vê elemento a elemento, um por um, e vai passando
     public static void sort(int[] array) {
         System.out.println("Antes de sort de array: " + Arrays.toString(array))
         ;
