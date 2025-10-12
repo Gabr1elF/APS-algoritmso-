@@ -8,11 +8,16 @@ public class MergeSort {
     private static long inicioTempo = 0;   // ⏳ armazena o tempo inicial
     private static boolean iniciou = false; // controla se já iniciamos a contagem
 
+
+
     // Função principal que será chamada no main
-    public static void mergeSort(int[] array, int left, int right) {
+    public static void sort(int[] array, int left, int right) {
+
 
         // Inicia a contagem de tempo na primeira chamada
         if (!iniciou) {
+            System.out.println("\n--------------------------Merge Sort-----------------------\n");
+            System.out.println("Antes de sort de array: " + Arrays.toString(array));
             inicioTempo = System.currentTimeMillis();
             iniciou = true;
         }
@@ -20,8 +25,8 @@ public class MergeSort {
         if (left < right) {
             int middle = (left + right) / 2;
 
-            mergeSort(array, left, middle);
-            mergeSort(array, middle + 1, right);
+            sort(array, left, middle);
+            sort(array, middle + 1, right);
 
             merge(array, left, middle, right);
 
@@ -35,10 +40,13 @@ public class MergeSort {
             System.out.println("Tempo total MergeSort: " + (fimTempo - inicioTempo) + " ms");
             iniciou = false;  // reseta para futuras execuções
         }
+
+
     }
 
     // Função que faz o merge de duas metades
     public static void merge(int[] array, int left, int middle, int right) {
+
         int n1 = middle - left + 1;
         int n2 = right - middle;
 
@@ -77,16 +85,6 @@ public class MergeSort {
             k++;
         }
     }
-
-    // Função para imprimir o array
-    public static void printArray(int[] array) {
-        for (int value : array) {
-            System.out.print(value + " ");
-        }
-        System.out.println();
-    }
-
-    public static void resetContador() {
-        contadorPassadas = 1;
-    }
 }
+
+
