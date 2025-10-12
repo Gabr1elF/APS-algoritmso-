@@ -10,15 +10,15 @@ import static org.example.sorting.MergeSort.merge;
 
 public class Main {
     public static void main(String[] args) {
-        int[] tamanhos = {20}; // tamanhos de teste
+        int[] tamanhos = {200}; // tamanhos de teste
 
 
 
 
         for (int n : tamanhos) {
             int[] meme = GerarArrayAleatorio.gerarArrayAleatorio(n, 20);
-            MergeSort.mergeSort(meme, 0, meme.length - 1); // chamada correta
-            MergeSort.printArray(meme); // opcional: para mostrar o resultado
+            MergeSort.sort(meme, 0, meme.length - 1); // chamada correta
+            BubbleSort.sort(meme);
         }
     }
     }

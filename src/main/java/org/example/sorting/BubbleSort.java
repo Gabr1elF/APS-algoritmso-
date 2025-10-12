@@ -6,6 +6,7 @@ public class BubbleSort {
 
     //Esse é algoritmo mais lento, pois ele vê elemento a elemento, um por um, e vai passando
     public static void sort(int[] array) {
+        System.out.println("\n" + "----------Bubble Sort----------" + "\n");
         System.out.println("Antes de sort de array: " + Arrays.toString(array))
         ;
         long inicio = System.currentTimeMillis();
@@ -24,7 +25,7 @@ public class BubbleSort {
         }
 
         long fim = System.currentTimeMillis();
-        System.out.println("Tempo: " + (fim - inicio) + " ms \n \n \n \n");
+        System.out.println("Tempo total do BubbleSort: " + (fim - inicio) + " ms \n \n \n \n");
 
     }
 }
